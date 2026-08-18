@@ -3,6 +3,68 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
     const form = this;
+
+    const email = document.getElementById("email");
+    const phone = document.getElementById("phone");
+
+    const emailError = document.getElementById("emailError");
+    const phoneError = document.getElementById("phoneError");
+
+    // Clear previous errors
+    emailError.textContent = "";
+    phoneError.textContent = "";
+
+    email.classList.remove("input-error");
+    phone.classList.remove("input-error");
+
+    let valid = true;
+
+    // --------------------------------
+    // EMAIL VALIDATION
+    // --------------------------------
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+    if (!emailPattern.test(email.value.trim())) {
+
+        emailError.textContent = "Please enter a valid email address.";
+        email.classList.add("input-error");
+
+        valid = false;
+    }
+
+    // --------------------------------
+    // PHONE VALIDATION
+    // --------------------------------
+
+    if (!iti.isValidNumber()) {
+
+        phoneError.textContent =
+            "Please enter a valid phone number.";
+
+        phone.classList.add("input-error");
+
+        valid = false;
+    }
+
+    // Stop if email or phone is invalid
+    if (!valid) {
+        return;
+    }
+
+    // --------------------------------
+    // GET FULL INTERNATIONAL PHONE NUMBER
+    // --------------------------------
+
+    const fullPhoneNumber = iti.getNumber();
+
+    // Put the full number into the phone input
+    phone.value = fullPhoneNumber;
+
+    // --------------------------------
+    // SEND TO GOOGLE FORMS
+    // --------------------------------
+
     const formData = new FormData(form);
 
     fetch(
@@ -21,6 +83,16 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
         );
 
         form.reset();
+
+        // Reset country to Kenya
+        iti.setCountry("ke");
+
+        // Clear errors
+        emailError.textContent = "";
+        phoneError.textContent = "";
+
+        email.classList.remove("input-error");
+        phone.classList.remove("input-error");
 
     })
     .catch(() => {
