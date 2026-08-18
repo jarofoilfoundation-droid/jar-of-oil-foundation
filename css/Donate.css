@@ -206,10 +206,35 @@ cursor:pointer;
 
 
 
+ 
 /* PESAPAL */
 
 
 
+
+.pesapal-card {
+  border-top: 8px solid #0066B3;
+}
+
+/* Pesapal heading */
+.pesapal-card h3 {
+  color: #0066B3;
+}
+
+/* Coming Soon Alert */
+.pesapal-coming-soon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff5f5;
+  color: #D71920;
+  border: 1px solid #D71920;
+  padding: 9px 16px;
+  border-radius: 25px;
+  font-weight: bold;
+  margin: 15px 0;
+  animation: alertPulse 1.5s infinite;
+}/* PESAPAL */
 
 .pesapal-card {
   border-top: 8px solid #0066B3;
@@ -284,6 +309,14 @@ cursor:pointer;
     opacity: 0.25;
   }
 }
+
+
+
+
+
+
+
+
 
 
 /* IMPACT */

@@ -10,6 +10,7 @@ function copyTill() {
     }, 2500);
   });
 }
+
 function showPesapalNotice() {
   document.getElementById("pesapalNotice").style.display = "flex";
 }

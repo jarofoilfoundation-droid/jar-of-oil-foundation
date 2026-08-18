@@ -6,7 +6,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     const formData = new FormData(form);
 
     fetch(
-        "https://docs.google.com/forms/d/e/1FAIpQLSc54hPtrJL6jtb3YV7EZXbFea80WhJgVJe_iWr_JqPsFW2skQ/viewform?usp=dialog",
+        "https://docs.google.com/forms/d/e/1FAIpQLSc54hPtrJL6jtb3YV7EZXbFea80WhJgVJe_iWr_JqPsFW2skQ/formResponse",
         {
             method: "POST",
             mode: "no-cors",
