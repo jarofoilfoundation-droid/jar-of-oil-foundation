@@ -1,0 +1,427 @@
+/* =========================
+   GLOBAL VARIABLES
+========================= */
+
+:root{
+
+--cream:#F5EFE6;
+--cream-dark:#E6D8C3;
+
+--primary:#C8A46A;
+
+--purple:#5B2C83;
+
+--brown:#5C4332;
+
+--white:#ffffff;
+
+--black:#111;
+
+--text:#333;
+
+--bg:#F8F5F0;
+
+}
+
+
+
+/* =========================
+   RESET
+========================= */
+
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family:Arial, Helvetica, sans-serif;
+
+}
+
+
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+background:var(--bg);
+
+color:var(--text);
+
+line-height:1.7;
+
+}
+
+
+
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+
+.top-bar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:10px 6%;
+
+background:var(--cream-dark);
+
+color:var(--black);
+
+flex-wrap:wrap;
+
+}
+
+
+
+.contact-info p{
+
+font-size:14px;
+
+margin:0;
+
+}
+
+
+
+
+.social-icons{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+
+
+.social-icons img{
+
+width:22px;
+
+transition:.3s;
+
+}
+
+
+
+.social-icons img:hover{
+
+transform:translateY(-3px);
+
+}
+
+
+
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+
+.navbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:var(--white);
+
+padding:15px 6%;
+
+position:relative;
+
+z-index:100;
+
+}
+
+
+
+
+/* LOGO */
+
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+font-size:18px;
+
+font-weight:bold;
+
+color:var(--brown);
+
+}
+
+
+
+.logo img{
+
+width:70px;
+
+height:70px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+}
+
+
+
+
+
+/* NAV LINKS */
+
+
+.nav-links{
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+}
+
+
+
+.nav-links a{
+
+text-decoration:none;
+
+color:var(--black);
+
+padding:8px 14px;
+
+border-radius:25px;
+
+transition:.3s;
+
+font-weight:500;
+
+}
+
+
+
+.nav-links a:hover{
+
+background:var(--cream-dark);
+
+}
+
+
+
+
+
+/* DONATE BUTTON */
+
+
+.donateBtn{
+
+background:var(--primary);
+
+color:white!important;
+
+padding:10px 22px!important;
+
+border-radius:30px;
+
+font-weight:bold;
+
+}
+
+
+
+.donateBtn:hover{
+
+background:var(--brown);
+
+color:white!important;
+
+}
+
+
+
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
+
+.hamburger{
+
+display:none;
+
+font-size:30px;
+
+cursor:pointer;
+
+color:var(--brown);
+
+}
+
+
+
+
+
+/* =========================
+   BUTTON STYLE
+========================= */
+
+
+.btn{
+
+display:inline-block;
+
+padding:14px 30px;
+
+background:var(--primary);
+
+color:white;
+
+text-decoration:none;
+
+border-radius:30px;
+
+transition:.3s;
+
+font-weight:bold;
+
+}
+
+
+
+.btn:hover{
+
+background:var(--brown);
+
+transform:translateY(-3px);
+
+}
+
+
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+
+footer{
+
+background:#222;
+
+color:white;
+
+text-align:center;
+
+padding:25px;
+
+}
+
+
+
+
+
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+
+@media(max-width:900px){
+
+
+
+.nav-links{
+
+
+position:absolute;
+
+top:100%;
+
+right:0;
+
+background:white;
+
+width:230px;
+
+display:none;
+
+flex-direction:column;
+
+padding:25px;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.nav-links a{
+
+width:100%;
+
+margin:5px 0;
+
+}
+
+
+
+.nav-links.active{
+
+display:flex;
+
+}
+
+
+
+.hamburger{
+
+display:block;
+
+}
+
+
+
+.top-bar{
+
+flex-direction:column;
+
+text-align:center;
+
+gap:8px;
+
+}
+
+
+}
